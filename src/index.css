@@ -55,6 +55,10 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .App {
+    height: 100vh;
+  }
+
   .container {
     width: 90%;
     max-width: 750px;
