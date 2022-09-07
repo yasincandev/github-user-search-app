@@ -1,13 +1,76 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  /*LIGHT MODE*/
+  --lightBlue: #60abff;
+  --blue: #0079ff;
+  --red: #f74646;
+  --darkBlue: #4b6a9b;
+  --gray: #697c9a;
+  --white: #f6f8ff;
+  --transparent: #fefefe;
+  --black: #2b3442;
+  --duration: 0.2s;
+
+  /*DARK MODE*/
+  --darkGray: #141d2f;
+  --dark: #1e2a47;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 750px;
+  max-height: 100%;
+  width: 100%;
+  gap: 2rem;
+}
+
+.AppLight {
+  background-color: var(--white);
+}
+
+.AppDark {
+  background-color: var(--darkGray);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+    max-width: 750px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 90%;
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    width: 90%;
+    max-width: 400px;
+  }
 }
