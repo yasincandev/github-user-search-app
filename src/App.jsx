@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import Search from "./components/Search";
 import UserCard from "./components/UserCard";
@@ -6,13 +6,24 @@ import axios from "axios";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+
   const [user, setUser] = useState(null);
   const [username, setUsername] = useState("");
   const [errorText, setErrorText] = useState("");
 
   const handleDarkMode = () => {
     setDarkMode(!darkMode);
+    localStorage.setItem("darkMode", !darkMode);
   };
+
+  useEffect(() => {
+    const darkMode = localStorage.getItem("darkMode");
+    if (darkMode === "true") {
+      setDarkMode(true);
+    } else {
+      setDarkMode(false);
+    }
+  }, []);
 
   const handleChange = (e) => {
     e.preventDefault();
