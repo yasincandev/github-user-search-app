@@ -58,6 +58,7 @@
 
 .DarkSearch .search__input {
   color: var(--white);
+  background: var(--dark);
 }
 
 .DarkSearch .search__input::placeholder {
@@ -70,7 +71,7 @@
   }
 
   .search__input {
-    font-size: 0.8rem;
+    font-size: 11px;
   }
 
   .search__button {
