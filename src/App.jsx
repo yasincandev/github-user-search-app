@@ -49,16 +49,20 @@ function App() {
   return (
     <div className={darkMode ? "App AppDark" : "App AppLight"}>
       <div className="container">
-        <Header darkMode={darkMode} handleDarkMode={handleDarkMode} />
-        <Search
-          handleChange={handleChange}
-          getUser={getUser}
-          darkMode={darkMode}
-          value={username}
-          user={user}
-          errorText={errorText}
-        />
-        {user && <UserCard user={user} darkMode={darkMode} />}
+        <div className="header__search__container">
+          <Header darkMode={darkMode} handleDarkMode={handleDarkMode} />
+          <Search
+            handleChange={handleChange}
+            getUser={getUser}
+            darkMode={darkMode}
+            value={username}
+            user={user}
+            errorText={errorText}
+          />
+        </div>
+        <div className="user__card__container">
+          {user && <UserCard user={user} darkMode={darkMode} />}
+        </div>
       </div>
     </div>
   );

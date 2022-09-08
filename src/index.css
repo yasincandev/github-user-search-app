@@ -26,25 +26,17 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: var(--white);
+  color: var(--black);
+  transition: background-color var(--duration), color var(--duration);
 }
 
 .App {
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  max-width: 750px;
-  height: 100%;
-  width: 100%;
-
-  gap: 2rem;
 }
 
 .AppLight {
@@ -55,22 +47,64 @@ body {
   background-color: var(--darkGray);
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1000px;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+.header__search__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.user__card__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 @media screen and (max-width: 768px) {
-  .container {
-    width: 90%;
-    height: 100%;
+  .App {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
   }
 }
 
 @media screen and (max-width: 500px) {
+  .App {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
   .container {
-    width: 90%;
+    padding: 0 10px;
+    overflow: hidden;
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 300px) {
+  .App {
+    min-width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
   .container {
-    width: 90%;
-    height: 100%;
+    padding: 0 10px;
+    overflow: hidden;
   }
 }
