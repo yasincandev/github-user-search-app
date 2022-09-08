@@ -50,9 +50,19 @@
 
 @media screen and (max-width: 768px) {
   .header {
-    gap: 1rem;
+    gap: 16px;
   }
 
+  .header__title {
+    font-size: 1.2rem;
+  }
+
+  .theme__button {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
   .header__title {
     font-size: 1.2rem;
   }

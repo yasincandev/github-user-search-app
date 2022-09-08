@@ -23,22 +23,6 @@
   box-sizing: border-box;
   font-family: "Space Mono", monospace;
 }
-
-body {
-  font-family: "Poppins", sans-serif;
-  background-color: var(--white);
-  color: var(--black);
-  transition: background-color var(--duration), color var(--duration);
-}
-
-.App {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .AppLight {
   background-color: var(--white);
 }
@@ -47,64 +31,69 @@ body {
   background-color: var(--darkGray);
 }
 
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.App {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 36px;
+}
+
 .container {
+  max-width: 732px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  max-width: 1000px;
-  width: 100%;
-  height: 100%;
-  padding: 0 20px;
-  overflow: hidden;
 }
 
-.header__search__container {
+.header__container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: space-between;
   width: 100%;
 }
 
-.user__card__container {
+.main__container {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
+  gap: 16px;
 }
 
 @media screen and (max-width: 768px) {
-  .App {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+  .header__container {
+    gap: 16px;
   }
-}
 
-@media screen and (max-width: 500px) {
-  .App {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+  .main__container {
+    gap: 8px;
   }
 
   .container {
-    padding: 0 10px;
-    overflow: hidden;
+    max-width: 450px;
   }
 }
 
-@media screen and (max-width: 300px) {
-  .App {
-    min-width: 100%;
-    min-height: 100vh;
-    overflow: hidden;
+@media screen and (max-width: 480px) {
+  .header__container {
+    gap: 8px;
+  }
+
+  .main__container {
+    gap: 4px;
   }
 
   .container {
-    padding: 0 10px;
-    overflow: hidden;
+    max-width: 300px;
   }
 }
